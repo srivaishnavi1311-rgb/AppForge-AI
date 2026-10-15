@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppForge AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ AppForge AI</div>
+        <div class="tagline">Turn ideas into applications</div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>Build an App with AI</h1>
+            <p>
+                Describe your application idea and let AppForge AI
+                design and generate the frontend for you.
+            </p>
+        </section>
+
+        <section class="generator-card">
+
+            <label for="appBrief">Describe your application</label>
+
+            <textarea
+                id="appBrief"
+                placeholder="Example: Create a student attendance management website for teachers..."
+            ></textarea>
+
+            <button id="generateBtn" onclick="generateApp()">
+                Generate App
+            </button>
+
+            <p id="status"></p>
+
+        </section>
+
+        <section id="result" class="result-section">
+
+            <h2>Generated Application</h2>
+
+            <button id="previewBtn" onclick="previewApp()">
+                🚀 Preview Generated App
+            </button>
+
+            <div class="file-cards">
+
+                <div class="file-card">
+                    <span>🌐</span>
+                    <h3>index.html</h3>
+                    <p>Application structure</p>
+                </div>
+
+                <div class="file-card">
+                    <span>🎨</span>
+                    <h3>style.css</h3>
+                    <p>Application styling</p>
+                </div>
+
+                <div class="file-card">
+                    <span>⚙️</span>
+                    <h3>app.js</h3>
+                    <p>Application functionality</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

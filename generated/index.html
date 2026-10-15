@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>StudyFlow</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="app">
+  <nav class="sidebar" id="sidebar">
+    <div class="logo">StudyFlow</div>
+    <ul class="nav-list" id="navList">
+      <li class="nav-item active" data-screen="dashboard">Dashboard</li>
+      <li class="nav-item" data-screen="tasks">Tasks</li>
+      <li class="nav-item" data-screen="subjects">Subjects</li>
+    </ul>
+    <button class="btn add-task-btn" id="globalAddTaskBtn">+ Add Task</button>
+  </nav>
+
+  <header class="topbar" id="topbar">
+    <button class="btn menu-toggle" id="menuToggle">☰</button>
+    <h1 class="page-title" id="pageTitle">Dashboard</h1>
+  </header>
+
+  <main class="main" id="mainContent"></main>
+
+  <!-- Modals -->
+  <div class="modal" id="taskModal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <h2 id="modalTitle">Add Task</h2>
+      <form id="taskForm">
+        <div class="form-group">
+          <label for="taskTitle">Title</label>
+          <input type="text" id="taskTitle" required />
+        </div>
+        <div class="form-group">
+          <label for="taskDue">Due Date</label>
+          <input type="date" id="taskDue" required />
+        </div>
+        <div class="form-group">
+          <label for="taskSubject">Subject</label>
+          <select id="taskSubject"></select>
+        </div>
+        <div class="form-group">
+          <label for="taskStatus">Status</label>
+          <select id="taskStatus">
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn" id="cancelTaskBtn">Cancel</button>
+          <button type="submit" class="btn primary" id="saveTaskBtn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
